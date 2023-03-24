@@ -1,0 +1,1 @@
+DB_CONNECTION_URL = =mongodb+srv://root:<password>@cluster0.bsgmzle.mongodb.net/<ProjectName>?retryWrites=true&w=majority
