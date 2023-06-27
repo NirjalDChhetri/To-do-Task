@@ -72,17 +72,17 @@ class TodoController {
   async update(req, res, next) {
     try {
       const { id } = req.params;
-      console.log(id)
+      console.log(id);
       if (!id) {
         throw new Error("Invalid ID");
       }
       const todo = await TodoService.update(id, req.body);
       return res.status(200).json({
-        status: true,
+        status: "success",
         data: {
           todo,
-          message: "Todo Updated successfully",
         },
+        message: "Todo Updated successfully",
       });
     } catch (error) {
       return next(error);
